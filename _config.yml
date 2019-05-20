@@ -107,12 +107,12 @@ analytics:
 # Site Author
 author:
   name             : "Sean Golbad"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/sean.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Oakland, CA"
   email            :
   github           : "sgolbad88"
-  linkedin         : "seangolbad"  
+  linkedin         : "seangolbad"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
