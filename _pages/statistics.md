@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /statistics/
-title: "Statistics Post by Tags"
+title: "Statistics Posts by Tags"
 author_profile: true
 header:
   image: "/images/bay-area.jpg"
