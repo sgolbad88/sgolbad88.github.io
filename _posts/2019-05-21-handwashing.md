@@ -3,7 +3,7 @@ title: "Statistics Project: Handwashing"
 date: 2019-05-21
 tags: [statistics, data science, t-test]
 header:
-  image: "/images/ignaz.jpg"
+  image: "/images/ignazsemmelweis.jpg"
 excerpt: "Statistics, Handwashing, Data Science"
 ---
 
