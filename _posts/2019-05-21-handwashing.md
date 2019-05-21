@@ -125,7 +125,6 @@ Welch Two Sample t-test:
 * t = 9.6101
 + df = 92.435
 - p-value = 1.445e-15
-alternative hypothesis: true difference in means is not equal to 0
 
 95 percent confidence interval: 0.06660662 0.10130659
 
