@@ -4,7 +4,7 @@ permalink: /statistics/
 title: "Statistics Posts by Tags"
 author_profile: true
 header:
-  image: "/images/bayarealights.jpg"
+  image: "/images/sf.jpg"
 ---
 
 {% include group-by-array collection=site.posts field="tags" %}
