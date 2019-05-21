@@ -24,7 +24,7 @@ yearly <- read_csv("datasets/yearly_deaths_by_clinic.csv")
 # Print out yearly
 yearly
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/initialtable.jpg" alt="data">
+<img src="{{ site.url }}{{ site.baseurl }}/images/yearly.png" alt="data">
 
 # The alarming number of deaths
 
@@ -40,7 +40,7 @@ yearly <- yearly %>% mutate(proportion_deaths = deaths/births)
 # Print out yearly
 yearly
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/proportiondeathstable.jpg" alt="proportion of deaths data">
+<img src="{{ site.url }}{{ site.baseurl }}/images/yearlypropdeath.jpg" alt="proportion of deaths data">
 
 # Deaths at the clinic
 
@@ -57,7 +57,7 @@ ggplot(yearly, aes(x = year, y = proportion_deaths, color = clinic)) +
     labs(x = "Year", y = "Proportion of Deaths")
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/lineplotproportiondeaths.jpg" alt="proportion of deaths line plot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/initiallineplot.png" alt="proportion of deaths line plot">
 
 # The handwashing begins
 
@@ -78,7 +78,7 @@ monthly <- monthly %>% mutate(proportion_deaths = deaths/births)
 # Print out the first rows in monthly
 head(monthly)
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/handwashingtable.jpg" alt="handwashing data">
+<img src="{{ site.url }}{{ site.baseurl }}/images/afterhandwashing.png" alt="handwashing data">
 
 # The effect of handwashing
 
@@ -135,7 +135,7 @@ monthly_summary <- monthly %>%
 monthly_summary
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/meanpropdeathstable.jpg" alt="mean proportion of deaths data">
+<img src="{{ site.url }}{{ site.baseurl }}/images/highlighteddata.png" alt="mean proportion of deaths data">
 
 # A statistical analysis of Semmelweis handwashing data
 
@@ -148,7 +148,7 @@ test_result <- t.test(proportion_deaths ~ handwashing_started, data = monthly)
 test_result
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/handwashingttest.jpg" alt="handwashing t-test">
+<img src="{{ site.url }}{{ site.baseurl }}/images/handwashingttest.png" alt="handwashing t-test">
 
 # The fate of Dr. Semmelweis
 That the doctors didn't wash their hands increased the proportion of deaths by between 6.7 and 10 percentage points, according to a 95% confidence interval. All in all, it would seem that Semmelweis had solid evidence that handwashing was a simple but highly effective procedure that could save many lives.
