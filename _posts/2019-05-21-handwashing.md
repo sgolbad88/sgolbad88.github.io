@@ -7,7 +7,7 @@ header:
 excerpt: "Statistics, Handwashing, Data Science"
 ---
 
-# Meet Dr. Ignaz Semmelweis
+## Meet Dr. Ignaz Semmelweis
 
 Dr. Ignaz Semmelweis, a Hungarian physician born in 1818, was active at the Vienna General Hospital and thinking about childbed fever: A deadly disease affecting women that just have given birth in the early 1840s. At the Vienna General Hospital, as many as 10% of the women giving birth died from it. He is thinking about it because he knows the cause of childbed fever: It's the contaminated hands of the doctors delivering the babies. And they won't listen to him and wash their hands!
 
@@ -24,9 +24,9 @@ yearly <- read_csv("datasets/yearly_deaths_by_clinic.csv")
 # Print out yearly
 yearly
 ```
-![alt]({{ site.url }}{{ site.baseurl }}/images/initialtable.jpg)
+<img src="{{ site.url }}{{ site.baseurl }}/images/initialtable.jpg" alt="data">
 
-# The alarming number of deaths
+## The alarming number of deaths
 
 The table above shows the number of women giving birth at the two clinics at the Vienna General Hospital for the years 1841 to 1846. You'll notice that giving birth was very dangerous; an alarming number of women died as the result of childbirth, most of them from childbed fever.
 
@@ -42,7 +42,7 @@ yearly
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/yearlypropdeath.jpg" alt="proportion of deaths data">
 
-# Deaths at the clinic
+## Deaths at the clinic
 
 If we now plot the proportion of deaths at both clinic 1 and clinic 2 we'll see a curious pattern...
 
@@ -59,7 +59,7 @@ ggplot(yearly, aes(x = year, y = proportion_deaths, color = clinic)) +
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/initiallineplot.png" alt="proportion of deaths line plot">
 
-# The handwashing begins
+## The handwashing begins
 
 Why is the proportion of deaths constantly so much higher in Clinic 1? Semmelweis saw the same pattern and was puzzled and distressed. The only difference between the clinics was that many medical students served at Clinic 1, while mostly midwife students served at Clinic 2. While the midwives only tended to the women giving birth, the medical students also spent time in the autopsy rooms examining corpses.
 
@@ -80,7 +80,7 @@ head(monthly)
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/afterhandwashing.png" alt="handwashing data">
 
-# The effect of handwashing
+## The effect of handwashing
 
 With the data loaded we can now look at the proportion of deaths over time. In the plot below we haven't marked where obligatory handwashing started, but it reduced the proportion of deaths to such a degree that you should be able to spot it!
 
@@ -94,7 +94,7 @@ ggplot(monthly, aes(x = date, y = proportion_deaths)) +
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/handwashinglineplot.png" alt="handwashing line plot">
 
-# The effect of handwashing highlighted
+## The effect of handwashing highlighted
 
 Starting from the summer of 1847 the proportion of deaths is drastically reduced and, yes, this was when Semmelweis made handwashing obligatory.
 
@@ -118,7 +118,7 @@ ggplot(monthly, aes(x = date, y = proportion_deaths, color = handwashing_started
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/handwashinghighefflp.png" alt="handwashing effect highlighted line plot">
 
-# More handwashing, fewer deaths?
+## More handwashing, fewer deaths?
 
 Again, the graph shows that handwashing had a huge effect. How much did it reduce the monthly proportion of deaths on average?
 
@@ -137,7 +137,7 @@ monthly_summary
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/highlighteddata.png" alt="mean proportion of deaths data">
 
-# A statistical analysis of Semmelweis handwashing data
+## A statistical analysis of Semmelweis handwashing data
 
 It reduced the proportion of deaths by around 8 percentage points! From 10% on average before handwashing to just 2% when handwashing was enforced (which is still a high number by modern standards). To get a feeling for the uncertainty around how much handwashing reduces mortalities we could look at a confidence interval (here calculated using a t-test).
 
@@ -150,7 +150,8 @@ test_result
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/handwashingttest.png" alt="handwashing t-test">
 
-# The fate of Dr. Semmelweis
+## The fate of Dr. Semmelweis
+
 That the doctors didn't wash their hands increased the proportion of deaths by between 6.7 and 10 percentage points, according to a 95% confidence interval. All in all, it would seem that Semmelweis had solid evidence that handwashing was a simple but highly effective procedure that could save many lives.
 
 The tragedy is that, despite the evidence, Semmelweis' theory — that childbed fever was caused by some "substance" (what we today know as bacteria) from autopsy room corpses — was ridiculed by contemporary scientists. The medical community largely rejected his discovery and in 1849 he was forced to leave the Vienna General Hospital for good.
