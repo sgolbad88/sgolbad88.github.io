@@ -3,13 +3,13 @@ title: "Statistics Project: Handwashing"
 date: 2019-05-21
 tags: [statistics, data science, t-test]
 header:
-  image: "/images/Semmelweis.jpg"
+  image: "/images/ignaz.jpg"
 excerpt: "Statistics, Handwashing, Data Science"
 ---
 
 ## Meet Dr. Ignaz Semmelweis
 
-Dr. Ignaz Semmelweis, a Hungarian physician born in 1818, was active at the Vienna General Hospital and thinking about childbed fever: A deadly disease affecting women that just have given birth in the early 1840s. At the Vienna General Hospital, as many as 10% of the women giving birth died from it. He is thinking about it because he knows the cause of childbed fever: It's the contaminated hands of the doctors delivering the babies. And they won't listen to him and wash their hands!
+Dr. Ignaz Semmelweis, a Hungarian physician born in 1818, who was active at the Vienna General Hospital and thinking about childbed fever: A deadly disease affecting women that just have given birth in the early 1840s. At the Vienna General Hospital, as many as 10% of the women giving birth died from it. He is thinking about it because he knows the cause of childbed fever: It's the contaminated hands of the doctors delivering the babies. And they won't listen to him and wash their hands!
 
 In this analysis, we're going to reanalyze the data that made Semmelweis discover the importance of handwashing. Let's start by looking at the data that made Semmelweis realize that something was wrong with the procedures at Vienna General Hospital.
 
