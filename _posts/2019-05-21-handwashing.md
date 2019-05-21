@@ -24,7 +24,7 @@ yearly <- read_csv("datasets/yearly_deaths_by_clinic.csv")
 # Print out yearly
 yearly
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/yearly.png" alt="data">
+![alt]({{ site.url }}{{ site.baseurl }}/images/initialtable.jpg)
 
 # The alarming number of deaths
 
