@@ -112,10 +112,6 @@ monthly_summary <- monthly %>%
     summarize(mean_proportion_deaths = mean(proportion_deaths))
 ```
 
-Handwashing Started   Proportion of Deaths (mean)
-False                 0.11
-True                  0.21
-
 It reduced the proportion of deaths by around 8 percentage points! From 10% on average before handwashing to just 2% when handwashing was enforced (which is still a high number by modern standards). To get a feeling for the uncertainty around how much handwashing reduces mortalities we could look at a confidence interval (here calculated using a t-test).
 
 R code block:
@@ -125,16 +121,13 @@ test_result <- t.test(proportion_deaths ~ handwashing_started, data = monthly)
 test_result
 ```
 
-Welch Two Sample t-test
-
-data:  proportion_deaths by handwashing_started
-t = 9.6101, df = 92.435, p-value = 1.445e-15
+Welch Two Sample t-test:
+* t = 9.6101
++ df = 92.435
+- p-value = 1.445e-15
 alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- 0.06660662 0.10130659
-sample estimates:
-mean in group FALSE  mean in group TRUE
-         0.10504998          0.02109338
+
+95 percent confidence interval: 0.06660662 0.10130659
 
 ## The fate of Dr. Semmelweis
 
