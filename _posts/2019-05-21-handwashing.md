@@ -20,15 +20,9 @@ library(tidyverse)
 
 # Read datasets/yearly_deaths_by_clinic.csv into yearly
 yearly <- read_csv("datasets/yearly_deaths_by_clinic.csv")
-
-# Print out yearly
-yearly
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/initialtable.jpg" alt="data">
 
-## The alarming number of deaths
-
-The table above shows the number of women giving birth at the two clinics at the Vienna General Hospital for the years 1841 to 1846. You'll notice that giving birth was very dangerous; an alarming number of women died as the result of childbirth, most of them from childbed fever.
+The data shows the number of women giving birth at the two clinics at the Vienna General Hospital for the years 1841 to 1846. You'll notice that giving birth was very dangerous; an alarming number of women died as the result of childbirth, most of them from childbed fever.
 
 We see this more clearly if we look at the *proportion of deaths* out of the number of women giving birth.
 
@@ -36,20 +30,14 @@ R code block:
 ```r
 # Adding a new column to yearly with proportion of deaths per no. births
 yearly <- yearly %>% mutate(proportion_deaths = deaths/births)
-
-# Print out yearly
-yearly
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/yearlypropdeath.jpg" alt="proportion of deaths data">
-
-## Deaths at the clinic
 
 If we now plot the proportion of deaths at both clinic 1 and clinic 2 we'll see a curious pattern...
 
 R code block:
 ```r
 # Setting the size of plots in this notebook
-options(repr.plot.width=7, repr.plot.height=4)
+options(repr.plot.width = 7, repr.plot.height = 4)
 
 # Plot yearly proportion of deaths at the two clinics
 ggplot(yearly, aes(x = year, y = proportion_deaths, color = clinic)) +
@@ -74,13 +62,7 @@ monthly <- read_csv("datasets/monthly_deaths.csv")
 
 # Adding a new column with proportion of deaths per no. births
 monthly <- monthly %>% mutate(proportion_deaths = deaths/births)
-
-# Print out the first rows in monthly
-head(monthly)
 ```
-<img src="{{ site.url }}{{ site.baseurl }}/images/afterhandwashing.png" alt="handwashing data">
-
-## The effect of handwashing
 
 With the data loaded we can now look at the proportion of deaths over time. In the plot below we haven't marked where obligatory handwashing started, but it reduced the proportion of deaths to such a degree that you should be able to spot it!
 
@@ -93,8 +75,6 @@ ggplot(monthly, aes(x = date, y = proportion_deaths)) +
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/handwashinglineplot.png" alt="handwashing line plot">
-
-## The effect of handwashing highlighted
 
 Starting from the summer of 1847 the proportion of deaths is drastically reduced and, yes, this was when Semmelweis made handwashing obligatory.
 
@@ -118,7 +98,7 @@ ggplot(monthly, aes(x = date, y = proportion_deaths, color = handwashing_started
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/handwashinghighefflp.png" alt="handwashing effect highlighted line plot">
 
-## More handwashing, fewer deaths?
+## More handwashing, fewer deaths? A statistical analysis of Semmelweis handwashing data
 
 Again, the graph shows that handwashing had a huge effect. How much did it reduce the monthly proportion of deaths on average?
 
@@ -130,14 +110,11 @@ R code block:
 monthly_summary <- monthly %>%
     group_by(handwashing_started) %>%
     summarize(mean_proportion_deaths = mean(proportion_deaths))
-
-# Printing out the summary.
-monthly_summary
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/highlighteddata.png" alt="mean proportion of deaths data">
-
-## A statistical analysis of Semmelweis handwashing data
+Handwashing Started   Proportion of Deaths (mean)
+False                 0.11
+True                  0.21
 
 It reduced the proportion of deaths by around 8 percentage points! From 10% on average before handwashing to just 2% when handwashing was enforced (which is still a high number by modern standards). To get a feeling for the uncertainty around how much handwashing reduces mortalities we could look at a confidence interval (here calculated using a t-test).
 
@@ -148,7 +125,16 @@ test_result <- t.test(proportion_deaths ~ handwashing_started, data = monthly)
 test_result
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/handwashingttest.png" alt="handwashing t-test">
+Welch Two Sample t-test
+
+data:  proportion_deaths by handwashing_started
+t = 9.6101, df = 92.435, p-value = 1.445e-15
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.06660662 0.10130659
+sample estimates:
+mean in group FALSE  mean in group TRUE
+         0.10504998          0.02109338
 
 ## The fate of Dr. Semmelweis
 
