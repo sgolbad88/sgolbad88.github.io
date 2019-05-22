@@ -3,7 +3,7 @@ title: "Statistics Project: Programming"
 date: 2019-05-21
 tags: [statistics, data science, data visualization]
 header:
-excerpt: "Statistics, Programming, Data Science"
+excerpt: "Data Visualization, Programming, Data Science"
 ---
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/tags.png" alt="tags">
