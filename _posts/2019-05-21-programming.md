@@ -3,7 +3,7 @@ title: "Statistics Project: Programming"
 date: 2019-05-21
 tags: [statistics, data science, data visualization]
 header:
-excerpt: "Statistics, Handwashing, Data Science"
+excerpt: "Statistics, Programming, Data Science"
 ---
 
 ## Data on tags over time
