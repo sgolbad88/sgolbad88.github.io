@@ -6,6 +6,8 @@ header:
 excerpt: "Statistics, Handwashing, Data Science"
 ---
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignaz_semmelweis_1860.jpeg" alt="">
+
 ## Meet Dr. Ignaz Semmelweis
 
 Dr. Ignaz Semmelweis, a Hungarian physician born in 1818, who was active at the Vienna General Hospital and thinking about childbed fever: A deadly disease affecting women that just have given birth in the early 1840s. At the Vienna General Hospital, as many as 10% of the women giving birth died from it. He is thinking about it because he knows the cause of childbed fever: It's the contaminated hands of the doctors delivering the babies. And they won't listen to him and wash their hands!
