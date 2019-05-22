@@ -2,7 +2,7 @@
 title: "Statistics Project: Handwashing"
 date: 2019-05-21
 tags: [statistics, data science, t-test]
-header:
+header: "Dr. Semmelweis And The Discovery Of Handwashing"
 excerpt: "Statistics, Handwashing, Data Science"
 ---
 

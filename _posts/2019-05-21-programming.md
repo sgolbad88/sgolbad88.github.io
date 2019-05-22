@@ -2,7 +2,7 @@
 title: "Statistics Project: Programming"
 date: 2019-05-21
 tags: [statistics, data science, data visualization]
-header:
+header: "Rise and Fall Of Programming Languages"
 excerpt: "Data Visualization, Programming, Data Science"
 ---
 
