@@ -130,12 +130,12 @@ Wow, based on that graph we've seen a lot of changes in what programming languag
 
 This Stack Overflow data is incredibly versatile. We can analyze any programming language, web framework, or tool where we'd like to see their change over time. Combined with the reproducibility of R and its libraries, we have ourselves a powerful method of uncovering insights about technology.
 
-To demonstrate its versatility, let's check out how three big mobile operating systems (Android, iOS, and Windows Phone) have compared in popularity over time. But remember: this code can be modified simply by changing the tag names!
+To demonstrate its versatility, let's check out how the two big mobile operating systems (Android and iOS) have compared in popularity over time. But remember: this code can be modified simply by changing the tag names!
 
 R code block:
 ```r
 # Get tags of interest
-my_tags <- c("android", "ios", "windows-phone")
+my_tags <- c("android", "ios")
 
 # Filter for those tags
 by_tag_subset <- filter(by_tag_year_fraction, tag == my_tags)
@@ -146,4 +146,4 @@ ggplot(by_tag_subset, aes(x = year, y = fraction, color = tag)) +
     labs(title = "Over Time", x = "Year", y = "Fraction")
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/compovertime.png" alt="programming languages line plot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/applevandriod.png" alt="programming languages line plot">
