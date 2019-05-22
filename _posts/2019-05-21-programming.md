@@ -2,7 +2,7 @@
 title: "Statistics Project: Programming"
 date: 2019-05-21
 tags: [statistics, data science, data visualization]
-header: "Rise and Fall Of Programming Languages"
+header:
 excerpt: "Data Visualization, Programming, Data Science"
 ---
 
@@ -124,26 +124,6 @@ ggplot(by_tag_subset, aes(x = year, y = fraction, color = tag)) +
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/6overtime.png" alt="programming languages line plot">
 
-## Some more tags!
-
 Wow, based on that graph we've seen a lot of changes in what programming languages are most asked about. C# gets fewer questions than it used to, and Python has grown quite impressively.
 
 This Stack Overflow data is incredibly versatile. We can analyze any programming language, web framework, or tool where we'd like to see their change over time. Combined with the reproducibility of R and its libraries, we have ourselves a powerful method of uncovering insights about technology.
-
-To demonstrate its versatility, let's check out how the two big mobile operating systems (Android and iOS) have compared in popularity over time. But remember: this code can be modified simply by changing the tag names!
-
-R code block:
-```r
-# Get tags of interest
-my_tags <- c("android", "ios")
-
-# Filter for those tags
-by_tag_subset <- filter(by_tag_year_fraction, tag == my_tags)
-
-# Plot tags over time on a line plot using color to represent tag
-ggplot(by_tag_subset, aes(x = year, y = fraction, color = tag)) +
-    geom_line() +
-    labs(title = "Over Time", x = "Year", y = "Fraction")
-```
-
-<img src="{{ site.url }}{{ site.baseurl }}/images/applevandriod.png" alt="programming languages line plot">
