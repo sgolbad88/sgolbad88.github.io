@@ -1,6 +1,6 @@
 ---
 title: "Statistics Project: Programming"
-date: 2019-05-21
+date: 2019-05-22
 tags: [statistics, data science, data visualization]
 header:
 excerpt: "Data Visualization, Programming, Data Science"
